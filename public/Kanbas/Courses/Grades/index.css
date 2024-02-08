@@ -1,0 +1,14 @@
+.table thead th {
+    background-color: #f2f2f2; /* Light grey background color */
+  }
+
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid blue; /* Set border to 1px solid blue */
+    text-align: center; /* Center-align text */
+  }
+
+  .table-bordered td:first-child { /* Target first column */
+    color: red; /* Set text color to red */
+    text-align: left; /* Right-align text */
+  }

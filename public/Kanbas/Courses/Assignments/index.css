@@ -1,0 +1,68 @@
+
+  .custom-badge {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 50px; /* for pill shape */
+    padding: 0.25rem 0.5rem; /* optional: adjust padding as needed */
+  }
+/* Custom input style */
+.custom-input {
+    border: 1px solid #ccc; /* Light rectangular border */
+  }
+  
+  /* Custom button style */
+  .custom-button {
+    padding: 0.375rem 0.75rem; /* Slight padding */
+  }
+  
+  /* Custom button color */
+  .custom-button.btn-secondary {
+    background-color: #ccc; /* Grey color */
+  }
+  
+  .custom-button.btn-danger {
+    background-color: red; /* Red color */
+  }
+  
+  /* Custom select style */
+  .custom-select {
+    /* Add any additional styling for the select element here */
+  }
+
+  .custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    padding: 0 0.5rem;
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+  }
+  .ellipsis-box {
+    width: 20px;
+    height: 20px;
+    position: relative;
+  }
+  
+  .dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: black;
+    border-radius: 50%;
+  }
+  
+  .dot:nth-child(1) {
+    top: 5px;
+  }
+  
+  .dot:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .dot:nth-child(3) {
+    bottom: 5px;
+  }
+  
