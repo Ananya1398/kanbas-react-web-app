@@ -23,4 +23,60 @@
     font-size: 2em;
     margin-bottom: 5px;
   }
-  
+  .wd-kanbas-navigation2 {
+    background-color: white;
+    list-style: none;
+    padding: 0px;  margin: 0px;
+    color: red;
+    height: fit-content
+    
+  }
+  .wd-kanbas-navigation2 a {
+    color: red;
+    text-decoration: none;
+  }
+  .wd-kanbas-navigation2 a i {
+    color: red;
+    font-size: 2em;
+    margin-bottom: 5px;
+  }
+  .wd-kanbas-navigation3 {
+    background-color: white;
+    list-style: none;
+    padding: 0px;  margin: 0px;
+    color: red;
+    height: fit-content
+    
+  }
+  .wd-kanbas-navigation3 a {
+    color: red;
+    text-decoration: none;
+  }
+  .wd-kanbas-navigation3 a i {
+    color: red;
+    margin-bottom: 5px;
+    size: 0cap;
+  }
+  .button-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.button-list li {
+    margin-bottom: 5px; /* Adjust spacing between buttons */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #f0f0f0; /* Light grey background color */
+    color: #333; /* Text color */
+    text-decoration: none;
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 0px; /* Rounded corners */
+    width: 210px;
+}
+
+.button:hover {
+    background-color: #e0e0e0; /* Darker grey background color on hover */
+}
