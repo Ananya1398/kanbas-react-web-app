@@ -77,6 +77,10 @@
     width: 210px;
 }
 
-.button:hover {
-    background-color: #fcfbfb; /* Darker grey background color on hover */
+.title:hover {
+    color: #fcfbfb; /* Darker grey background color on hover */
+}
+
+li a:hover {
+  color:white
 }

@@ -115,10 +115,7 @@
     text-decoration: none;
     color: black;
   }
-  li a:hover{
-    text-decoration: underline;
-    color: black;
-  }
+
 
   .green{
     color: green
