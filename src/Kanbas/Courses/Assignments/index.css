@@ -1,0 +1,125 @@
+.wd-modules,
+.wd-modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+}
+
+.wd-modules > li > div {
+  padding: 6px;
+  border-left: 1px solid gray !important;
+}
+
+.wd-modules > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.custom-btn {
+    width: 140px;
+    height: 40px;
+    border-radius: 0;
+    padding-right: 10px;
+  }
+  .custom-btn1 {
+    width: 140px;
+    height: 40px;
+    border-radius: 0;
+    padding-right: 10px;
+    color: black;
+  }
+  
+  .custom-select {
+    width: 200px;
+    height: 40px;
+    border-radius: 0;
+    padding-right: 10px;
+  }
+  
+  .btn-light {
+    background-color: lightgrey;
+  }
+
+  .custom-btn-ellipsis{
+    width: 30px;
+    height: 40px;
+    border-radius: 0;
+    align : left ;
+    text-align: center;
+  }
+
+  .cust{
+    align-items: center;
+    align: center;
+
+  }
+
+  .hrclass{
+    padding-left: 27px;
+    width: 100%;
+  }
+
+
+  .custom-badge {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 50px; /* for pill shape */
+    padding: 0.25rem 0.5rem; /* optional: adjust padding as needed */
+  }
+/* Custom input style */
+.custom-input {
+    border: 1px solid #ccc; /* Light rectangular border */
+    width: 40%;
+  }
+  
+  /* Custom button style */
+  .custom-button {
+    padding: 0.375rem 0.75rem; /* Slight padding */
+  }
+  
+  /* Custom button color */
+  .custom-button.btn-secondary {
+    background-color: #ccc; /* Grey color */
+  }
+  
+  .custom-button.btn-danger {
+    background-color: red; /* Red color */
+  }
+
+  .w-40{
+    width: 25%!important;
+  }
+
+ .wd-modules a{
+    text-decoration: none;
+    color: black;
+  }
+  li a:hover{
+    text-decoration: underline;
+    color: black;
+  }
+
+  .green{
+    color: green
+  }

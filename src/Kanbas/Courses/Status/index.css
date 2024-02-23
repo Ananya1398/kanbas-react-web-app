@@ -1,0 +1,40 @@
+.button-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.button-list li {
+    margin-bottom: 5px; /* Adjust spacing between buttons */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #f0f0f0; /* Light grey background color */
+    color: #333; /* Text color */
+    text-decoration: none;
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 0px; /* Rounded corners */
+    width: 230px;
+}
+
+.button:hover {
+    background-color: #e0e0e0; /* Darker grey background color on hover */
+}
+
+.todo{
+    color: black;
+}
+.hr{
+    color: black;
+    width:200px
+}
+
+.deco{
+    text-decoration: none;
+    color: red;
+}
+
+.deco2{
+    list-style: none;
+}

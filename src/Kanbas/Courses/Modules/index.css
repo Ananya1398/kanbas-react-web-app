@@ -1,0 +1,74 @@
+.wd-modules,
+.wd-modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+}
+
+.wd-modules > li > div {
+  padding: 6px;
+  border-left: 1px solid gray !important;
+}
+
+.wd-modules > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.custom-btn {
+    width: 140px;
+    height: 40px;
+    border-radius: 0;
+    padding-right: 10px;
+  }
+
+
+  .custom-select {
+    width: 200px;
+    height: 40px;
+    border-radius: 0;
+    padding-right: 10px;
+  }
+  
+  .btn-light {
+    background-color: lightgrey;
+  }
+
+  .custom-btn-ellipsis{
+    width: 30px;
+    height: 40px;
+    border-radius: 0;
+    align : left ;
+    text-align: center;
+  }
+
+  .cust{
+    align-items: center;
+    align: center;
+
+  }
+
+  .hrclass{
+    padding-left: 27px;
+    width: 100%;
+  }

@@ -1,0 +1,22 @@
+.custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    padding: 0 0.5rem;
+    color: #B52828;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+  }
+
+  .custom-breadcrumb {
+    color: #B52828;
+    padding-top: 20px;
+    padding-left: 27px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+  }
+
+  .hrclass{
+    padding-left: 27px;
+    width: 100%;
+    color: black;
+  }
+
