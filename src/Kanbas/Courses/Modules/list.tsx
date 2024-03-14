@@ -19,7 +19,7 @@ function ModuleList() {
       &#x2713;<FaCheckCircle className="text-success"/>Publish All</option>
   </select>
   <button type="button" className="btn btn-danger custom-btn align-left">+ Module &nbsp;</button>
-  <button type="button" className="custom-btn-ellipsis align-left"> <FaEllipsisV className="ms-2 cust" /></button>
+  <button type="button" className="custom-btn-ellipsis align-right"> <FaEllipsisV className="ms-2 cust" /></button>
   </div>
 
 <hr className="hrclass"/>
