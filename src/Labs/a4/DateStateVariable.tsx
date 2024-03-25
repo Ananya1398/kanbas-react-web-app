@@ -20,3 +20,4 @@ function DateStateVariable() {
     </div>
   );
 }
+export default DateStateVariable

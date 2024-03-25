@@ -7,6 +7,12 @@ import Counter from "./Counter";
 import ReduxExamples from "./ReduxExamples";
 import { useSelector } from "react-redux";
 import { LabState } from "../store";
+import BooleanStateVariables from "./BooleanStateVariables";
+import StringStateVariables from "./StringStateVariables";
+import DateStateVariable from "./DateStateVariable";
+import ObjectStateVariable from "./ObjectStateVariable";
+import ArrayStateVariable from "./ArrayStateVariable";
+import ParentStateComponent from "./ParentStateComponent";
 
 function Assignment4() {
     function sayHello() {
@@ -29,6 +35,12 @@ function Assignment4() {
       <PassingFunctions theFunction={sayHello} />
       <EventObject/>
       <Counter/>
+      <BooleanStateVariables/>
+      <StringStateVariables/>
+      <DateStateVariable/>
+      <ObjectStateVariable/>
+      <ArrayStateVariable/>
+      <ParentStateComponent/>
     </div>
   );
 };
