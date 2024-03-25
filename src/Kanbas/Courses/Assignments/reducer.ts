@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { assignments } from "../../Database";
 const initialState = {
   assignments: assignments,
-  assignment: { name: "New assignment 123", description: "New Description", points: "100", due: "2024-01-01", from: "2024-01-01", until: "2024-01-01" },
+  assignment: { title: "New assignment", description: "New Description", points: "100", due: "2024-01-01", from: "2024-01-01", until: "2024-01-01" },
 };
 const assignmentsSlice = createSlice({
   name: "assignments",

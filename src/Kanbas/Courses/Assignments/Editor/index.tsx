@@ -18,12 +18,6 @@ function AssignmentEditor() {
   const assignment = useSelector((state: KanbasState) =>
     state.assignmentsReducer.assignment);
   const check_existing_assignment = assignmentList.find((assignment) => assignment._id === assignmentId)
-  // const [title, setTitle] = useState("");
-  // const [description, setDescription] = useState("");
-  // const [points, setPoints] = useState("");
-  // const [due, setDue] = useState("");
-  // const [from, setFrom] = useState("");
-  // const [untill, setUntill] = useState("");
 
   useEffect(() => {
     if(check_existing_assignment  !== undefined) {
@@ -46,7 +40,6 @@ function AssignmentEditor() {
       })
     )
   };
-    //window.location.href = `/Kanbas/Courses/${courseId}/Assignments`;
     navigate(`/Kanbas/Courses/${courseId}/Assignments`)
   };
 
