@@ -120,3 +120,8 @@
   .green{
     color: green
   }
+
+  .custom-buttons {
+    padding: 5px 10px; /* Adjust padding as needed */
+    border-radius: 5px; /* Adjust border radius as needed */
+  }

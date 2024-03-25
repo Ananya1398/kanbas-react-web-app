@@ -72,3 +72,20 @@
     padding-left: 27px;
     width: 100%;
   }
+
+  .align-down{
+    align-items: flex-end  ;
+  }
+
+  .custom-input,
+.custom-textarea {
+  border: 1px solid #ced4da; /* Light gray border color */
+  border-radius: 0.25rem; /* Border radius */
+  padding: 0.375rem 0.75rem; /* Padding */
+  font-size: 1rem; /* Font size */
+  line-height: 1.5; /* Line height */
+}
+
+.custom-textarea {
+  resize: vertical; /* Allow vertical resizing of textarea */
+}

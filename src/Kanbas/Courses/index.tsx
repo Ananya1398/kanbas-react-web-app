@@ -8,10 +8,9 @@ import Grades from "./Grades";
 import "./index.css";
 import Modules from "./Modules";
 import Home from "./Home";
-function Courses() {
+function Courses({ courses }: { courses: any[]; }) {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
-  return (
+  const course = courses.find((course) => course._id === courseId);return (
     <div>
        <ol className="breadcrumb custom-breadcrumb">
       <li className="breadcrumb-item"><HiMiniBars3 /> &nbsp;&nbsp;{course?.name} </li>
