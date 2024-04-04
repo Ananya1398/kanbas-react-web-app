@@ -1,10 +1,24 @@
 import React, { useEffect} from "react";
 import { Link, useParams, useNavigate  } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addAssignment, setAssignment, updateAssignment } from "../reducer";
-import { FaCheckCircle, FaEllipsisV } from "react-icons/fa";
 import { KanbasState } from "../../../store";
 import "./index.css";
+import { FaCheckCircle, FaEllipsisV, FaPlusCircle, FaPencilAlt} from "react-icons/fa";
+import { BsPencilSquare } from "react-icons/bs";
+import { assignments } from "../../../Database";
+import "./index.css";
+import {Modal} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import {
+
+  deleteAssignment,
+  updateAssignment,
+  addAssignment,
+  setAssignment,
+  setAssignments
+
+} from "../reducer";
+import * as client from "../client";
 
 function AssignmentEditor() {
   const { courseId, assignmentId } = useParams();
@@ -27,17 +41,21 @@ function AssignmentEditor() {
         dispatch(setAssignment([]))
     }
   },[])
-  const handleSave = () => {
+  const handleSave = async() => {
     if(check_existing_assignment  !== undefined) {
-      dispatch(updateAssignment(assignment ))
+      const status = await client.updateAssignment(assignment);
+      dispatch(updateAssignment(assignment));
   }
   else {
-    dispatch(
-      addAssignment({
-        ...assignment,
-        course: courseId,
-        _id: assignmentId
-      })
+    client.createAssignment(courseId, assignment).then((assignment:any) => {
+      dispatch(addAssignment(assignment))
+    }
+    // dispatch(
+    //   addAssignment({
+    //     ...assignment,
+    //     course: courseId,
+    //     _id: assignmentId
+    //   })
     )
   };
     navigate(`/Kanbas/Courses/${courseId}/Assignments`)

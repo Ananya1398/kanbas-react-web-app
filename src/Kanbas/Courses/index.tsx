@@ -8,9 +8,21 @@ import Grades from "./Grades";
 import "./index.css";
 import Modules from "./Modules";
 import Home from "./Home";
-function Courses({ courses }: { courses: any[]; }) {
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+function Courses() {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);return (
+  const COURSES_API = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState<any>({ _id: "" });
+  const findCourseById = async (courseId?: string) => {
+    const response = await axios.get(
+      `${COURSES_API}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+
+  return (
     <div>
        <ol className="breadcrumb custom-breadcrumb">
       <li className="breadcrumb-item"><HiMiniBars3 /> &nbsp;&nbsp;{course?.name} </li>
@@ -92,6 +104,6 @@ function Courses({ courses }: { courses: any[]; }) {
       </div>
 
     </div>
-  );
+  )
 }
 export default Courses;

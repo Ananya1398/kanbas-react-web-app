@@ -1,4 +1,4 @@
-import React, {useState}  from "react";
+import React, {useEffect,useState}  from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle, FaPencilAlt} from "react-icons/fa";
 import { BsPencilSquare } from "react-icons/bs";
 import { Link, useParams } from "react-router-dom";
@@ -8,18 +8,30 @@ import { KanbasState } from "../../store";
 import "./index.css";
 import {Modal} from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import * as client from "./client";
 import {
 
   deleteAssignment,
+  updateAssignment,
+  addAssignment,
+  setAssignment,
+  setAssignments
 
 } from "./reducer";
+import { findAssignmentsForCourse, createAssignment } from "./client";
 function Assignments() {
+
+
   const dispatch = useDispatch();
   
   const { courseId } = useParams();
-  // const assignmentList = assignments.filter(
-  //   (assignment) => assignment.course === courseId);
-   
+  useEffect(() => {
+    findAssignmentsForCourse(courseId)
+      .then((modules) =>
+        dispatch(setAssignments(modules))
+    );
+  }, [courseId]);
+
     const assignmentList = useSelector((state: KanbasState) =>
     state.assignmentsReducer.assignments.filter(
          (assignment) => assignment.course === courseId));
@@ -35,7 +47,10 @@ function Assignments() {
      setShowConfirmation(true);
    };
    const handleConfirmDelete = () => {
-     dispatch(deleteAssignment(assignmentToDelete));
+    client.deleteAssignment(assignmentToDelete).then((status) => {
+      dispatch(deleteAssignment(assignmentToDelete));
+    });
+
      setShowConfirmation(false);
    };
    const handleCloseConfirmation = () => {
