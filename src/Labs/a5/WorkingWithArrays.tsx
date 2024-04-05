@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 function WorkingWithArrays() {
+  const API_BASE = process.env.REACT_APP_API_BASE;
   const [errorMessage, setErrorMessage] = useState(null);
   const [todo, setTodo] = useState({
     id: 1,
@@ -9,7 +10,7 @@ function WorkingWithArrays() {
     due: "2021-09-09",
     completed: false,
   });
-  const API = "http://localhost:4000/a5/todos";
+  const API = `${API_BASE}/a5/todos`;
   const [todos, setTodos] = useState<any[]>([]);
   const postTodo = async () => {
     const response = await axios.post(API, todo);
