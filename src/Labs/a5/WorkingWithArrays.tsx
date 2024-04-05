@@ -74,13 +74,13 @@ function WorkingWithArrays() {
         </div>
       )}
       <h2>Working with Arrays</h2>
-      <input value={todo.id} readOnly />
-      <input onChange={(e) => setTodo({ ...todo, title: e.target.value })}
+      <input className="form-control" value={todo.id} readOnly />
+      <input className="form-control" onChange={(e) => setTodo({ ...todo, title: e.target.value })}
         value={todo.title} type="text" />
-      <textarea value={todo.description} 
+      <textarea className="form-control" value={todo.description} 
         onChange={(e) => setTodo({ ...todo,
           description: e.target.value })} />
-      <input value={todo.due} type="date"
+      <input className="form-control" value={todo.due} type="date"
         onChange={(e) => setTodo({
           ...todo, due: e.target.value })} />
       <label>
