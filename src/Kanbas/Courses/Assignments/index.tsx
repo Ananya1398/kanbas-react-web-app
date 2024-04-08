@@ -24,7 +24,7 @@ function Assignments() {
     state.assignmentsReducer.assignments.filter(
          (assignment) => assignment.course === courseId));
     const new_assignment_id='A10'+(assignmentList.length+1)
- 
+ console.log("al",assignmentList)
   const assignment = useSelector((state: KanbasState) =>
     state.assignmentsReducer.assignment);
     const [showConfirmation, setShowConfirmation] = useState(false);

@@ -17,8 +17,9 @@ function AssignmentEditor() {
  
   const assignment = useSelector((state: KanbasState) =>
     state.assignmentsReducer.assignment);
-  const check_existing_assignment = assignmentList.find((assignment) => assignment._id === assignmentId)
-
+  const check_existing_assignment = assignmentList.find(
+    (assignment) => assignment._id === assignmentId && assignment.course === courseId)
+  // console.log('Course ID', courseId)
   useEffect(() => {
     if(check_existing_assignment  !== undefined) {
         dispatch(setAssignment(check_existing_assignment ))
@@ -28,10 +29,12 @@ function AssignmentEditor() {
     }
   },[])
   const handleSave = () => {
+    // console.log("CheckAssignment", check_existing_assignment)
     if(check_existing_assignment  !== undefined) {
       dispatch(updateAssignment(assignment ))
   }
   else {
+    console.log("first", assignment)
     dispatch(
       addAssignment({
         ...assignment,
