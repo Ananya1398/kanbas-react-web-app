@@ -1,4 +1,6 @@
 import Nav from "../nav";
+import Account from "./Account";
+import Signin from "../Users/Signin";
 import KanbasNavigation from "./Navigation";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Courses from "./Courses";
@@ -7,6 +9,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import store from "./store";
 import { Provider } from "react-redux";
+import { signin } from "../Users/client";
 
 function Kanbas() {
   const API_BASE = process.env.REACT_APP_API_BASE;
@@ -65,8 +68,9 @@ function Kanbas() {
         <div></div>
         <div style={{ flexGrow: 1 }}>
           <Routes>
+          <Route path="/Account/*" element={<Account />} />
             <Route path="/" element={<Navigate to="Dashboard" />} />
-            <Route path="Account" element={<h1>Account</h1>} />
+            <Route path="Account" element={<Signin />} />
             <Route
               path="Dashboard"
               element={
