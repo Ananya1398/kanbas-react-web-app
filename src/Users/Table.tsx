@@ -12,6 +12,7 @@ export default function UserTable() {
     };
   
   const [users, setUsers] = useState<User[]>([]);
+  const [error, setError] = useState("");
   
   const deleteUser = async (user: User) => {
     try {
@@ -43,12 +44,13 @@ export default function UserTable() {
   const [user, setUser] = useState<User>({
     _id: "", username: "", password: "", firstName: "",
     lastName: "", role: "USER" });
+
   const createUser = async () => {
     try {
       const newUser = await client.createUser(user);
       setUsers([newUser, ...users]);
-    } catch (err) {
-      console.log(err);
+    } catch (err:any) {
+      setError(err.response.data.message);
     }
   };
 
@@ -70,42 +72,51 @@ export default function UserTable() {
         <option value="STUDENT">Student</option>
       </select>
       <h1>User Table</h1>
+      {error && <div>{error}</div>}
       <table className="table">
         <thead>
-        <tr>
-            <td>
-      
-              <input value={user.username} onChange={(e) =>
-                setUser({ ...user, username: e.target.value })}/>
-                        <input value={user.password} onChange={(e) =>
-                setUser({ ...user, password: e.target.value })}/>
-            </td>
-            <td>
-              <input value={user.firstName} onChange={(e) =>
-                setUser({ ...user, firstName: e.target.value })}/>
-            </td>
-            <td>
-              <input value={user.lastName} onChange={(e) =>
-                setUser({ ...user, lastName: e.target.value })}/>
-            </td>
-            <td>
-              <select value={user.role} onChange={(e) =>
-                setUser({ ...user, role: e.target.value })}>
-                <option value="USER">User</option>
-                <option value="ADMIN">Admin</option>
-                <option value="FACULTY">Faculty</option>
-                <option value="STUDENT">Student</option>
-              </select>
-            </td>
-            <td>
-            <BsFillCheckCircleFill
-      onClick={updateUser}
-      className="me-2 text-success fs-1 text"
-    />
-              <BsPlusCircleFill onClick={createUser}/>
-            </td>
-            <th>&nbsp;</th>
-          </tr>
+        <tr className="user-row">
+  <td>
+    <div className="input-group1">
+      <div className="input-label1">Username:</div>
+      <input value={user.username} onChange={(e) => setUser({...user, username: e.target.value })}/>
+    </div>
+    </td>
+    <td>
+    <div className="input-group1">
+      <div className="input-label1">Password:</div>
+      <input value={user.password} onChange={(e) => setUser({...user, password: e.target.value })}/>
+    </div>
+  </td>
+  <td>
+    <div className="input-group1">
+      <div className="input-label1">First Name:</div>
+      <input value={user.firstName} onChange={(e) => setUser({...user, firstName: e.target.value })}/>
+    </div>
+  </td>
+  <td>
+    <div className="input-group1">
+      <div className="input-label1">Last Name:</div>
+      <input value={user.lastName} onChange={(e) => setUser({...user, lastName: e.target.value })}/>
+    </div>
+  </td>
+  <td>
+    <div className="input-group1">
+      <div className="input-label1">Role:</div>
+      <select value={user.role} onChange={(e) => setUser({...user, role: e.target.value })}>
+        <option value="USER">User</option>
+        <option value="ADMIN">Admin</option>
+        <option value="FACULTY">Faculty</option>
+        <option value="STUDENT">Student</option>
+      </select>
+    </div>
+  </td>
+  <td>
+    <BsFillCheckCircleFill onClick={updateUser} className="icon-btn success-icon"/>
+    <BsPlusCircleFill onClick={createUser} className="icon-btn"/>
+  </td>
+</tr>
+
         </thead>
         <tbody>
           {users.map((user: any) => (

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as client from "./client";
+import { Button } from "react-bootstrap";
+import "./index.css";
 export default function Signup() {
   const [error, setError] = useState("");
   const [user, setUser] = useState({ username: "", password: "" });
@@ -14,14 +16,19 @@ export default function Signup() {
     }
   };
   return (
-    <div>
-      <h1>Signup</h1>
-      {error && <div>{error}</div>}
-      <input value={user.username} onChange={(e) => setUser({
-          ...user, username: e.target.value })} />
-      <input value={user.password} onChange={(e) => setUser({
-          ...user, password: e.target.value })} />
-      <button onClick={signup}> Signup </button>
+    <div className="signup-form1">
+    <h1>Signup</h1>
+    {error && <div className="error-message">{error}</div>}
+    <div className="input-group1">
+      <div className="input-label1">Username:</div>
+      <input className="form-control1" value={user.username} onChange={(e) => setUser({...user, username: e.target.value })} />
     </div>
+    <div className="input-group1">
+      <div className="input-label1">Password:</div>
+      <input className="form-control1" value={user.password} onChange={(e) => setUser({...user, password: e.target.value })} />
+    </div>
+    <Button onClick={signup}>Signup</Button>
+  </div>
+  
   );
 }
